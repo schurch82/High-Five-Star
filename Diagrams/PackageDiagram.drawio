@@ -7,6 +7,82 @@
                 <mxCell id="2" value="PACKAGE DIAGRAM" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
                     <mxGeometry x="360" y="10" width="130" height="20" as="geometry"/>
                 </mxCell>
+                <mxCell id="24" style="edgeStyle=none;html=1;entryX=0.555;entryY=0.188;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.621;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="4" target="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="480" y="250" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="Presentation Layer" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="90" width="390" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Customer&amp;nbsp;" style="html=1;" vertex="1" parent="4">
+                    <mxGeometry width="90" height="30" relative="1" as="geometry">
+                        <mxPoint x="30" y="70" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="Admin" style="html=1;" vertex="1" parent="4">
+                    <mxGeometry x="280" y="70" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Service Provider" style="html=1;" vertex="1" parent="4">
+                    <mxGeometry x="150" y="70" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=none;html=1;exitX=0.37;exitY=0.18;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="362" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;exitX=0.375;exitY=1.018;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.367;entryY=0.187;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="6" target="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="500" as="sourcePoint"/>
+                        <mxPoint x="360" y="650" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="Business Layer" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="340" width="600" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Customer Object" style="html=1;" vertex="1" parent="6">
+                    <mxGeometry width="120" height="40" relative="1" as="geometry">
+                        <mxPoint x="40" y="60" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="Admin Object" style="html=1;" vertex="1" parent="6">
+                    <mxGeometry x="420" y="60" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Service Provider Object" style="html=1;" vertex="1" parent="6">
+                    <mxGeometry x="220" y="60" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Messages&amp;nbsp;" style="html=1;" vertex="1" parent="6">
+                    <mxGeometry x="130" y="120" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Reviews" style="html=1;" vertex="1" parent="6">
+                    <mxGeometry x="340" y="120" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;exitX=0.561;exitY=0.193;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.568;entryY=0.994;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8" target="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="481" y="640" as="sourcePoint"/>
+                        <mxPoint x="483" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="Data Layer" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="630" width="610" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Customer Table" style="html=1;" vertex="1" parent="8">
+                    <mxGeometry width="110" height="30" relative="1" as="geometry">
+                        <mxPoint x="60" y="65" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="Admin Table" style="html=1;" vertex="1" parent="8">
+                    <mxGeometry x="410" y="65" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Service Provider Table" style="html=1;" vertex="1" parent="8">
+                    <mxGeometry x="220" y="62.5" width="130" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Messages Table" style="html=1;" vertex="1" parent="8">
+                    <mxGeometry x="340" y="120" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Reviews Table" style="html=1;" vertex="1" parent="8">
+                    <mxGeometry x="140" y="120" width="110" height="30" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
