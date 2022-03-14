@@ -11,7 +11,7 @@ const {
 
 const {protect} = require('../middleware/authMiddleware')
 
-router.get('/all', protect, getUsers)
+router.get('/all',protect, getUsers)
 
 router.post('/', registerUsers)
 
