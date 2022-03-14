@@ -1,6 +1,11 @@
 import { useState,useEffect } from 'react'
 import {FaUser} from'react-icons/fa'
 import React from 'react'
+import {useSelector, useDispatch} from 'react-redux'
+import {useNavigate} from 'react-router-dom'
+import {toast} from 'react-toastify'
+import {register,reset} from '../features/auth/authSlice'
+import Spinner from '../components/Spinner'
 
 function Register(){
     const [formData, setFormData] = useState ({
@@ -13,6 +18,24 @@ function Register(){
 
     const {username,email,password,password2,role} = formData
 
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const {user, isLoading, isError, isSuccess,message} = useSelector((state) => state.auth)
+
+    useEffect(() =>{
+        if(isError){
+            toast.error(message)
+        }
+
+        if(isSuccess || user){
+            navigate('/')
+        }
+
+        dispatch(reset())
+
+    }, [user, isError, isSuccess, message, navigate, dispatch])
+
     const onChange = (e) => {
         setFormData((prevState) =>({
             ...prevState,
@@ -23,8 +46,23 @@ function Register(){
 
     const onSubmit = (e) => {
         e.preventDefault()
+        if(password !== password2){
+            toast.error('Passwords do not match')
+        }else{
+            const userData = {
+                username,
+                email,
+                password,
+                role
+            }
+
+            dispatch(register(userData))
+        }
     }
 
+    if(isLoading) {
+        return <Spinner />
+    }
 
     return <>
         <section className='heading'>
@@ -75,10 +113,10 @@ function Register(){
                     onChange={onChange}/>
                 </div>
                 <div className="form-group">
-                    <select name="role" id="role" onChange={onChange}>
+                    <select name="role" id="role" value = {role} onChange={onChange}>
                         <option value="">--Please Choose and option--</option>
-                        <option value="Customer">Customer</option>
-                        <option value="Service Provider">Service Provider</option>
+                        <option value="customer">Customer</option>
+                        <option value="service provider">Service Provider</option>
                     </select>
                 </div>
                 <div className="form-group">
