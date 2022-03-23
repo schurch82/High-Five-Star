@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   height: 100vh;
 }
 
@@ -26,6 +26,11 @@ ul {
 
 li {
   line-height: 2.2;
+  color:#FFFFFF
+}
+
+u{
+  color: #FFFFFF;
 }
 
 h1,
@@ -33,6 +38,7 @@ h2,
 h3 {
   font-weight: 600;
   margin-bottom: 10px;
+  color: #FFFFFF;
 }
 
 .container {
@@ -78,40 +84,20 @@ h3 {
 .heading {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-top: 10%;
+  margin-bottom: 5%;
   padding: 0 20px;
 }
 
 .heading p {
-  color: #828282;
+  color: #FFFFFF;
 }
 
-.goals {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.goal {
-  background-color: #f4f4f4;
-  margin: 10px 0;
-  padding: 20px 0 10px;
-  position: relative;
-}
-
-.goal .close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
 
 .form,
 .content {
   width: 70%;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .form-group {
@@ -127,6 +113,8 @@ h3 {
   border-radius: 5px;
   margin-bottom: 10px;
   font-family: inherit;
+
+
 }
 
 .form-group label {
@@ -137,9 +125,9 @@ h3 {
 
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 1px solid #EA6C6C;
   border-radius: 5px;
-  background: #000;
+  background: #EA6C6C;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -189,6 +177,86 @@ h3 {
   border-color: #000 transparent #555 transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
+}
+
+.leftbanner{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background:linear-gradient(180deg, rgba(87, 169, 194, 0.8) 13.53%, rgba(50, 159, 61, 0.8) 95.94%); 
+}
+
+.rightbanner{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  top: 0px;
+  background-image: url('/public/business-962358_1920.jpg');
+}
+
+.logincontainer{
+  position: absolute;
+  width: 438px;
+  height: 395px;
+  left: 30%;
+  top: 30%;
+  background: rgba(87, 169, 194, 0.93);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  mix-blend-mode: normal;
+}
+
+.logo{
+  position: absolute;
+  width: 267px;
+  height: 27px;
+  left: 30%;
+  top: 190px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+
+  color: #FFFFFF;
+}
+
+.slogan{
+  position: absolute;
+  width: 60%;
+  height: 88px;
+  left: 15%;
+  top: 341px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+}
+
+.titlelist{
+  position: absolute;
+  width: 60%;
+  height: 27px;
+  left: 130px;
+  top: 550px;
+  text-align: left;
+
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #FFFFFF;
 }
 
 @keyframes spin {

@@ -1,11 +1,14 @@
 import { useState,useEffect } from 'react'
-import {FaSignInAlt} from'react-icons/fa'
+import {FaUser} from 'react-icons/fa'
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {toast} from 'react-toastify'
 import {login,reset} from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
+import LeftBanner from '../components/LeftBanner'
+
+
 
 function Login(){
     const [formData, setFormData] = useState ({
@@ -58,40 +61,51 @@ function Login(){
     }
 
     return <>
-        <section className='heading'>
-            <h1> 
-                <FaSignInAlt /> Login
-            </h1>
-            <p>Please Login In</p>
-        </section>
-            <form onSubmit={onSubmit} >
-                <div className="form-group">
-                    <input 
-                    type="email" 
-                    className="form-control" 
-                    id='email'
-                    name='email' 
-                    value={email} 
-                    placeholder='Enter your email address' 
-                    onChange={onChange}/>
+        <LeftBanner />
+        <section className='rightbanner'>
+            <div className='logincontainer'>
+                <section className='heading'>
+                    <p>Please Log In</p>
+                </section>
+                    <section className='form'>
+                        <form onSubmit={onSubmit} >
+                            <div className="form-group">
+                                <input 
+                                type="email" 
+                                className="form-control" 
+                                id='email'
+                                name='email' 
+                                value={email} 
+                                placeholder='Enter your email address' 
+                                onChange={onChange}/>
+                            </div>
+                            <div className="form-group">
+                                <input 
+                                type="password" 
+                                className="form-control" 
+                                id='password'
+                                name='password' 
+                                value={password} 
+                                placeholder='Enter password' 
+                                onChange={onChange}/>
+                            </div>
+                            <div className="form-group">
+                                <button type='submit' className='btn btn-block'>Submit</button>
+                            </div>
+                            <div className='form-group'>
+                            <ul>
+                                <li>
+                                    Not a User? <Link to='/Register'>
+                                                     <u> Sign up here!</u>  
+                                                </Link>
+                                </li>
+                            </ul>
+                            </div>
+                        </form>
+                    </section>
                 </div>
-                <div className="form-group">
-                    <input 
-                    type="password" 
-                    className="form-control" 
-                    id='password'
-                    name='password' 
-                    value={password} 
-                    placeholder='Enter password' 
-                    onChange={onChange}/>
-                </div>
-                <div className="form-group">
-                    <button type='submit' className='btn btn-block'>Submit</button>
-                </div>
-            </form>
-        <section className='form'>
+            </section>
 
-        </section>
     </>
 }
 

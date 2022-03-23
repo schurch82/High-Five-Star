@@ -71,6 +71,7 @@ function Register(){
             </h1>
             <p>Please create an account</p>
         </section>
+        <section className='form'>
             <form onSubmit={onSubmit} >
                 <div className="form-group">
                     <input 
@@ -123,7 +124,7 @@ function Register(){
                     <button type='submit' className='btn btn-block'>Submit</button>
                 </div>
             </form>
-        <section className='form'>
+        
 
         </section>
     </>
