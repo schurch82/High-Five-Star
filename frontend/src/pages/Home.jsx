@@ -2,6 +2,7 @@ import React from 'react'
 import {useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {useSelector} from 'react-redux'
+import Header from '../components/Header'
 
 function Home(){
     const navigate = useNavigate()
@@ -14,7 +15,13 @@ function Home(){
         }
     }, [user,navigate])
 
-    return <div>Home</div>
+    return (
+        <>
+        <Header />
+        <div>Home</div>
+        
+        </>
+    )
 }
 
 export default Home
