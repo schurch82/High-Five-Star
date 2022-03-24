@@ -2,9 +2,9 @@ import React from 'react'
 import {useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {useSelector} from 'react-redux'
-import Header from '../components/Header'
+import ProviderHeader from '../components/ProviderHeader'
 
-function Home(){
+function ProviderHome(){
     const navigate = useNavigate()
     const {user} = useSelector((state) => state.auth)
 
@@ -17,11 +17,11 @@ function Home(){
 
     return (
         <>
-        <Header />
-        <div className='container'>Customer Home Page</div>
+        <ProviderHeader />
+        <div className='container'>Service Provider Home page</div>
         
         </>
     )
 }
 
-export default Home
+export default ProviderHome

@@ -20,8 +20,7 @@ function LeftBanner(){
                     <li><HiStar />The more you hire, the more you save</li>
                 </ul>
             </div>
-            
- 
+
         </div>
     )
 }

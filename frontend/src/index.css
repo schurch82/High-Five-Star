@@ -48,15 +48,28 @@ h3 {
   padding: 0 20px;
   text-align: center;
 }
+.contactcontainer{
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  left: 20%;
+  top: 15%;
+  background: rgba(87, 169, 194, 0.93);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  mix-blend-mode: normal;
+}
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  border-bottom: 1px solid #e6e6e6;
+  width: 100%;
   margin-bottom: 60px;
+  background: linear-gradient(270.04deg, rgba(87, 169, 194, 0.9) 0.45%, rgba(50, 159, 61, 0.459) 99.21%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 
 .header ul {
   display: flex;
@@ -66,6 +79,7 @@ h3 {
 
 .header ul li {
   margin-left: 20px;
+  margin-right: 10px;
 }
 
 .header ul li a {
@@ -92,6 +106,20 @@ h3 {
 .heading p {
   color: #FFFFFF;
 }
+
+.header-search input {
+  position: absolute;
+  font-family: 'Monserrat';
+  font-size: large;
+  padding: 10px;
+  width: 30%;
+  height: 40px;
+  left: 30%;
+  bottom:895px ;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
 
 
 .form,
@@ -129,8 +157,9 @@ h3 {
   border-radius: 5px;
   background: #EA6C6C;
   color: #fff;
-  font-size: 16px;
-  font-weight: 700;
+  font-family: 'Montserrat';
+  font-size: 17px;
+  font-weight: 500;
   cursor: pointer;
   text-align: center;
   appearance: button;
@@ -223,6 +252,16 @@ h3 {
 
   color: #FFFFFF;
 }
+
+.navlogo{
+  margin-left: 20px;
+  color: #FFFFFF;
+  font-family: 'Montserrat';
+  font-size: large;
+  
+}
+
+
 
 .slogan{
   position: absolute;

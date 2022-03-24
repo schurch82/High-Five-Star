@@ -29,7 +29,12 @@ function Login(){
         }
 
         if(isSuccess || user){
-            navigate('/')
+            if(user.role === 'customer'){
+                navigate('/')
+            }else{
+                navigate('/provider/home')
+            }
+            
         }
 
         dispatch(reset())
@@ -61,6 +66,7 @@ function Login(){
     }
 
     return <>
+    <div className='container'>
         <LeftBanner />
         <section className='rightbanner'>
             <div className='logincontainer'>
@@ -99,13 +105,18 @@ function Login(){
                                                      <u> Sign up here!</u>  
                                                 </Link>
                                 </li>
+                                <li>
+                                     <Link to='/Contact'>
+                                        <u> Contact Us!</u>  
+                                    </Link>
+                                </li>
                             </ul>
                             </div>
                         </form>
                     </section>
                 </div>
             </section>
-
+        </div>
     </>
 }
 

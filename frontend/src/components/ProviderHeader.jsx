@@ -5,7 +5,7 @@ import {logout, reset} from '../features/auth/authSlice'
 import {HiStar} from 'react-icons/hi'
 
 
-function Header() {
+function ProviderHeader() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     // const {user} = useSelector((state) => state.auth)
@@ -22,12 +22,6 @@ function Header() {
             Hire Five Star <br />
                 <HiStar /><HiStar /><HiStar /><HiStar /><HiStar />
             </div>
-            <div className='header-search'>
-                <input type="text" placeholder='Search for Services' /> 
-            </div>
-            <div>
-                <button className='btn'>Search</button>
-            </div>
             <ul>
                 <li>
                     <button className ='btn' onClick = {onLogout}>
@@ -40,4 +34,4 @@ function Header() {
     
 }
 
-export default Header
+export default ProviderHeader

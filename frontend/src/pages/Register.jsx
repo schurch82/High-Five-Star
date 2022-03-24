@@ -66,6 +66,7 @@ function Register(){
     }
 
     return <>
+    <div className='container'>
     <LeftBanner/>
     <section className='rightbanner'>
         <div className='registercontainer'>
@@ -140,6 +141,7 @@ function Register(){
             </section>
         </div>
     </section>
+    </div>
     </>
 }
 
